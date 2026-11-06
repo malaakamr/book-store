@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Book Store</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- STATIC: header, logo, heading, navigation -->
+  <header>
+    <div class="brand">
+      <img src="images/logo.png" alt="Digital Book Store logo" width="64" height="64">
+      <span class="brand-name">Digital Book Store</span>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#products">Books</a>
+      <a href="#footer">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to the Digital Book Store</h1>
+    <p>Stories to escape into, and knowledge to grow with.</p>
+  </section>
+
+  <main>
+    <section id="products">
+      <h2>Latest Releases</h2>
+
+      <!-- Filters (buttons are created by js/app.js from the data) -->
+      <div class="filters">
+        <div id="category-filters" class="filter-row" aria-label="Categories"></div>
+        <div id="sub-filters" class="filter-row sub" aria-label="Sub-categories"></div>
+        <input id="search" type="search" placeholder="Search by title or author...">
+      </div>
+      <p id="result-count" class="count"></p>
+
+      <!-- DYNAMIC: book cards are generated from js/books.js -->
+      <div id="product-list"></div>
+    </section>
+  </main>
+
+  <!-- STATIC: footer -->
+  <footer id="footer">
+    <p>All rights reserved &copy; 2026 Digital Book Store</p>
+  </footer>
+
+  <script src="js/books.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
